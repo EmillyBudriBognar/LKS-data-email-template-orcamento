@@ -1,5 +1,7 @@
 # ✨ Template de E-mail HTML para LKS Data
 
+Resultado: https://emillybudribognar.github.io/LKS-data-email-template-orcamento/
+
 Este projeto consiste na criação de um template de e-mail HTML responsivo e interativo via orçamento para a **LKS Data**, desenvolvido para ser utilizado em notificações automatizadas.
 
 ---
