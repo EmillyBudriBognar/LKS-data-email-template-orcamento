@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Pedido de Orçamento - LKS Data Soluções</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+            line-height: 1.6;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .email-header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 32px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://grainy-gradients.vercel.app/noise.svg') repeat;
+            opacity: 0.15;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+        
+        .logo-gradient {
+            background: linear-gradient(90deg, #f59e0b 0%, #3b82f6 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .email-title {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .email-body {
+            padding: 32px 24px;
+        }
+        
+        .section {
+            margin-bottom: 24px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 16px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6 0%, #10b981 100%);
+            border-radius: 3px;
+        }
+        
+        .info-grid {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 0;
+            gap: 8px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-weight: 500;
+            color: #4b5563;
+            min-width: 80px;
+            margin-right: 8px;
+        }
+        
+        .info-value {
+            font-weight: 400;
+            color: #1f2937;
+        }
+        
+        .message-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #3b82f6;
+            padding: 16px;
+            border-radius: 4px;
+            margin-top: 16px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 24px;
+            border-radius: 6px;
+            margin-top: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3), 0 2px 4px -1px rgba(59, 130, 246, 0.1);
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+        }
+        
+        .email-footer {
+            background-color: #f3f4f6;
+            padding: 24px;
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .animated {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <div class="header-overlay"></div>
+            
+            <div class="header-content">
+                <div class="badge animated">SOLUÇÕES EM DADOS</div>
+                <h1 class="email-title animated delay-1">Novo Pedido de Orçamento</h1>
+                <div class="logo animated delay-2">
+                    <span class="logo-gradient">LKS Data Soluções</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="email-body">
+            <div class="section animated delay-1">
+                <p>Olá,</p>
+                <p>Você recebeu um novo pedido de orçamento através do seu site!</p>
+            </div>
+            
+            <div class="section animated delay-2">
+                <h2 class="section-title">Detalhes do Pedido</h2>
+                <ul class="info-grid">
+                    <li class="info-item">
+                        <span class="info-label">Nome:</span>
+                        <span class="info-value">{{user_name}}</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="info-value">{{user_email}}</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Telefone:</span>
+                        <span class="info-value">{{user_phone}}</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Assunto:</span>
+                        <span class="info-value">{{user_subject}}</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section animated delay-3">
+                <h2 class="section-title">Mensagem</h2>
+                <div class="message-box float">
+                    <p>{{message}}</p>
+                </div>
+            </div>
+            
+            <div class="section" style="text-align: center;">
+                <a href="mailto:{{user_email}}?subject=Resposta ao orçamento: {{user_subject}}" class="cta-button animated delay-3">
+                    Responder ao Cliente
+                </a>
+            </div>
+        </div>
+        
+        <div class="email-footer">
+            <p>Por favor, entre em contato com o cliente para discutir os detalhes do orçamento.</p>
+            <p>Atenciosamente,<br>Equipe LKS Data Soluções</p>
+        </div>
+    </div>
+</body>
+</html>
